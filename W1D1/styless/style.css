@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+}
+
+body{
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+#logo{
+    width: 15%;
+    margin: 0 auto;
+    margin-left: 40%;
+    
+}
+
+#nav{
+    margin-top: 20px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: rgb(251, 241, 225);
+}
+
+#nav hr{
+    border: none;
+    border-top: 3px solid #FFE5A4;
+}
+
+#main{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#title{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#main-img{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-img{
+    height: 400px;
+}
+
+#author-img{
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#vertical-line{
+  margin: 0 auto;
+  border-left: 2px solid rgb(245, 210, 93); 
+}
+
+#featured{
+    margin-left: 20px;
+}
+
+.orange{
+    color: rgb(210, 54, 30);
+}
+
+.green{
+    color: rgb(34, 85, 34);
+}
+
+.header3{
+    margin-top: 40px;
+}
+
+.orizzontal-line{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-top: 2px solid #95e5f1;
+}
+
+footer{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.optimaze-list{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#ingredients li{
+    margin-top: 2%;
+}
