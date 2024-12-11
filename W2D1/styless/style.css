@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container{
+    position: relative;
+    width: 400px;
+}
+
+.card-container img{
+    width: 100%;
+}
+
+.save-button{
+    position: absolute;
+    font-weight: 400;
+    background-color: red;
+    color: white;
+    font-size: 35px;
+    border: none;
+    padding: 20px;
+    border-radius: 50px;
+    right: 9%;
+    top: -50%;
+    display: none;
+    cursor: pointer;
+    transition: top 0.5s ease;
+}
+
+.card-container:hover .save-button{
+    display: block;
+    top: 10%;
+}
+
+.bottom-card-container{
+    display: inline-block;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    right: -5%;
+    top: 85%;
+}
+
+.bottom-card-button{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: -5px 8px;
+    padding: 20px;
+    font-weight: 600;
+    display: none;
+    bottom: -50%;
+    transition: bottom 0.5s ease;
+}
+
+.card-container:hover .bottom-card-button{
+    display: inline-block;
+    bottom: 0%;
+}
