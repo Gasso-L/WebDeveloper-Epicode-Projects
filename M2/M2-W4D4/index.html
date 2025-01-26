@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styless/style.css">
+    <title>Cerca Lavoro</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cerca Lavoro</h1>
+        <nav>
+            <p><a href="#">Accedi</a></li></p>
+            <p><a href="#">Registrati</a></p>            
+        </nav>
+    </header>
+    <main>
+        <form>
+            <label for="title">Inserisci il Lavoro:</label>
+            <input type="text" id="title" placeholder="Es: Dev" minlength="3">
+            <p class="error-input p-hidden" id="title-error-input">* inserisci almeno 3 caratteri</p>
+            <label for="location">Inserisci il luogo di lavoro:</label>
+            <input type="text" id="location" placeholder="Es: US" minlength="2">
+            <p class="error-input p-hidden" id="position-error-input">* inserisci almeno 2 caratteri</p>
+            <button class="btn-searchJob">Cerca lavoro</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 By Lorenzo</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
