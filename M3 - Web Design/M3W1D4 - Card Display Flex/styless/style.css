@@ -1,0 +1,124 @@
+/* Reset CSS for all elements on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background-color: #FEF7E2;
+    border-radius: 20px;
+    padding: 20px 20px;
+    margin-top: 3rem;
+}
+
+.btn-navbar{
+    border-radius: 20px;
+    background-color: #FFDF7E;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.btn-shop{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 30px;
+}
+
+.btn-shop img{
+    max-width: 40px;
+}
+
+.card-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-card{
+    width: 25%;
+    background-color:#FEF7E2;
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+}
+
+.img-card img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+}
+
+.card-description{
+    width: 25%;
+    padding-top: 20px;
+    background-color:#FEF7E2;
+    border-bottom-left-radius: 7rem;
+    border-bottom-right-radius: 7rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-text-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.card-text-conteiner h2{
+    font-size: 20px;
+}
+
+.article-container{
+    width: 100%;
+    padding-top: 20px;
+    background-color: #FEF7E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.img-article-container{
+    padding: 20px 20px;
+}
+
+.article-description{
+    color: #612406;
+    width: 380px;
+}
+
+ .article-description h2{
+    margin-bottom: 30px;
+} 
+
+.img-article-container img{
+    width: 500px;
+}

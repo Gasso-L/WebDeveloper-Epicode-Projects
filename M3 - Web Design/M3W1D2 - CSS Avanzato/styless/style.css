@@ -1,0 +1,85 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron */
+.px-0 h1{
+    color: red;
+}
+
+/* ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar */
+
+nav span{
+    color: blue;
+}
+
+/* ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron */
+
+.lead.mb-0 a{
+    color: red;
+}
+
+/* ESERCIZIO 4) Crea un selettore per selezionare il primo blog post */
+.pb-4 + div{
+    background-color: grey;
+}
+
+/* ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso */
+
+.blog-main hr:first-of-type{
+    background-color: red;
+}
+
+
+/* ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar */
+
+nav span:nth-child(odd){
+    color: black;
+}
+
+/* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
+
+.mb-0 li{
+    font-size: 20px;
+}
+
+/* ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post */
+
+.blog-main div:nth-child(3) .blog-post-meta a{
+    color: grey;
+}
+
+/* ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post */
+
+.blog-main div:nth-child(4) li:nth-child(2){
+    background-color: yellow;
+}
+
+/* ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra */
+
+.float-right{
+    color: grey;
+}
+
+/* ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso */
+
+.btn-outline-secondary[aria-disabled] {
+    color: red;
+}
+
+/* ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer */
+
+.blog-footer p a:nth-child(2){
+    color: grey;
+}
