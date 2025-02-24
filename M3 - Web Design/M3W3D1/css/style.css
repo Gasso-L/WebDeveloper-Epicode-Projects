@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto", serif;
+    background-color: #F5F4F8;
+}
+
+.header-btn:active{
+    background: transparent;
+}
+
+.img-profile{
+    width: 35px;
+    height: 35px;
+}
+
+ion-icon{
+    font-size: 30px;
+}
+.btn-img-bkg{
+    background-image: url("../img/avatar-5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-small{
+    font-size: 12px;
+}
+
+.login-dropdown{
+    width: 200px;
+}
+
+.user-icon{
+    font-size: 14px;
+}
+
+.navbar-color{
+    border-color: #7E5CFE;
+    color: rgb(126, 92, 254);
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(126, 92, 254)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.hero-section{
+    background-color: #7550FE;
+}
+
+.btn-bkg-color-green{
+    background-color: #1ACB98;
+}
+
+.btn-bkg-color-brown{
+    background-color: #FFEEDA;
+    color: #C58237;
+}
+
+
+.bg-yellow{
+    background-color: #FFAA46;
+}
+
+.text-yellow{
+    color:#FFAA46;
+}
+
+.text-grey{
+    color: #A6A2B8;
+}
+
+.text-medium{
+    font-size: 20px;
+}
+
+.cards-wrapper .card{
+    margin: 10px;
+}
+
+.card-title{
+    height: 96px;
+}
+
+/* Modificare i colori dei bottoni */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    position: inherit;
+    background-color: grey; /* Colore di sfondo personalizzato */
+    width: 25px; /* Larghezza del bottone */
+    height: 25px; /* Altezza del bottone */
+    border-radius: 50%; /* Rendere il bottone circolare */
+    border-color: #EEEDF2;
+    
+}
+
+/* Posizionare i bottoni */
+.carousel-control-prev-icon {
+    left: 0px;
+}
+
+.carousel-control-next-icon {
+    right: 0px;
+}
+
+footer{
+    color: #697496;
+}
+
+footer a{
+    text-decoration: none;
+    color: #697496;
+}
+
+.color-change{
+    transition: color 0.3s ease-in-out;
+}
+
+.color-change:hover{
+    color: black;
+}
+
+.card{    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    height: 100%;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+}
