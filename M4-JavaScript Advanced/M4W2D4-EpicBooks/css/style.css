@@ -1,0 +1,63 @@
+.img-logo{
+    width: 100px;
+    height: 50px;
+}
+
+.ion-icon{
+    color:white;
+    font-size: 30px;
+}
+
+nav::after{
+    content: " ";
+    color: grey;
+    width: 100%;
+    display: flex;
+    border: 1px solid grey;
+}
+
+.book-card-container{
+    width: 18rem !important;
+}
+
+.books-cards-container img{
+    width: 200px !important;
+    height: 300px !important;
+}
+
+.spinner-show{
+    display: flex;
+    justify-content: center;
+}
+
+.spinner-off{
+    display: none !important;
+}
+
+dialog{
+    width: 100%;
+    height: auto;
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-modal-icon{
+    font-size: 35px;
+}
+
+.input-char-check-off{
+    display: none;
+}
+
+.char-check{
+    position: absolute;
+    top: 16%;
+}
+
+@media (max-width: 480px){
+    .char-check{
+        top: 32%;
+    }
+}
