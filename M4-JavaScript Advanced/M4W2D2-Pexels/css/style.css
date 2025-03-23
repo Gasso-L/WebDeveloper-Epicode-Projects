@@ -1,0 +1,5 @@
+.background-img{
+    background-image: url(https://images.pexels.com/photos/12956036/pexels-photo-12956036.jpeg?auto=compress&cs=tinysrgb&fit=crop&fp-y=0.6000000238418579&h=500&sharp=15&w=2000);
+    height: 450px;
+    object-fit: cover;
+}
