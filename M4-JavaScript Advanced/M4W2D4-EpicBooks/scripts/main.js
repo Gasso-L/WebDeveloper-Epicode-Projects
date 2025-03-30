@@ -38,7 +38,7 @@ const spinnerOff = () => {
     spinnerContainer.classList.add("spinner-off");
 }
 
-//Funzione creazione delle card contente i miei libri
+//Funzione creazione delle card contenente i miei libri
 const bookContainerGeneration = (data) => {
     const cardBookContainer = document.createElement("div");
     cardBookContainer.setAttribute("class", "col-12 col-md-4 d-flex card book-card-container");
@@ -59,12 +59,31 @@ const bookContainerGeneration = (data) => {
     priceCardBook.setAttribute("class", "card-text");
     priceCardBook.innerText = `Categoria: ` + data.category + `\nPrezzo: ` + data.price + `€`;
 
+    //contenitore per i bottoni
+    const btnContainer = document.createElement("div");
+    btnContainer.setAttribute("class","d-flex flex-column align-items-center gap-2")
+
     const btnCardBook = document.createElement("button");
-    btnCardBook.setAttribute("class", "btn btn-secondary btn-add-to-cart");
+    btnCardBook.setAttribute("class", "btn btn-secondary btn-add-to-cart w-100");
     btnCardBook.innerText = "Aggiungi al carrello";
     btnCardBook.value = data.asin;
 
-    cardBookBodyContainer.append(cardBookImage, titleCardBook, priceCardBook, btnCardBook);
+    const btnSkipBook = document.createElement("button");
+    btnSkipBook.setAttribute("class", "btn btn-secondary btn-skip-book w-100");
+    btnSkipBook.innerText = "Salta";
+    btnSkipBook.value = data.asin;
+
+    const btnDetails = document.createElement("button");
+    btnDetails.setAttribute("class","btn btn-secondary btn-book-details w-100");
+    btnDetails.innerText = "Dettagli";
+    //aggiungo l'evento al bottone dettagli con il percorso con l'id per ritrovare il libro
+    btnDetails.addEventListener("click", () => {
+        window.location.href = `./dettagli.html?id=${data.asin}`
+    });
+
+    btnContainer.append(btnCardBook, btnSkipBook, btnDetails);
+
+    cardBookBodyContainer.append(cardBookImage, titleCardBook, priceCardBook, btnContainer);
 
     cardBookContainer.appendChild(cardBookBodyContainer);
 
@@ -119,7 +138,7 @@ const cartBooksGeneration = (data) => {
     deleteBookFromCart.setAttribute("class", "d-flex justify-content-center")
     const btnDeleteBookFromCart = document.createElement("button");
     btnDeleteBookFromCart.setAttribute("class", "btn btn-secondary d-flex justify-content-center");
-    btnDeleteBookFromCart.innerHTML = `<ion-icon name="trash-outline"></ion-icon>`;
+    btnDeleteBookFromCart.innerHTML = `<i class="bi bi-trash3"></i>`;
 
     // Event listener per eliminare l'elemento dal carrello
     btnDeleteBookFromCart.addEventListener("click", () => removeFromCart(cartBookTr, data));
@@ -173,6 +192,24 @@ const checkInputField = () => {
     }
 };
 
+
+//funzione per il pulsante salta al carrello
+const assignBtnSkipBook = (books) => {
+    // selezioni tutti i button "Salta"
+    const btnsSkip = document.querySelectorAll(".btn-skip-book");
+    // per ogni bottone aggiungo un event listiner
+    btnsSkip.forEach(btnSkip => {
+        btnSkip.addEventListener("click", () => {
+            books.forEach(book => {
+                if (book.asin === btnSkip.value) {
+                    const bookContainer = document.querySelector(".book-card-container");
+                    bookContainer.remove();
+                }
+            })
+        });
+    });
+}
+
 //funzione che mi cerca il libro in base all'input
 const searchTitle = (results) => {
     btnSearchBook.addEventListener("click", () => {
@@ -191,10 +228,10 @@ const searchTitle = (results) => {
             bookCardsContainer.appendChild(emptyTitle);
          }  else {
              assignBtnAddToCartListeners(results);
+             assignBtnSkipBook(results);
          } 
     })
 };
-
 
 const bookCardsGeneration = async () => {
     spinnerShow();
@@ -213,16 +250,12 @@ bookCardsGeneration()
         results.forEach(book => {
             bookContainerGeneration(book);
         });
-        return results;
-    })
-    .then((results) => { //gestisci il carrello
         //funzione che mi genera un eventlistiner per il pulsante aggiungi al carrello
         assignBtnAddToCartListeners(results);
-        return results;
-    })
-    .then((results) => {
+        //funzione che mi genera un eventlistiner per il pulsante salta
+        assignBtnSkipBook(results);
         //Cerco il libro in base all'input
-        searchTitle(results);    
+        searchTitle(results);
     })
     .catch(error => console.log(error));
 
