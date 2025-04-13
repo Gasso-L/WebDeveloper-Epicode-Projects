@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --nav-blue: #131921;
+    --btn-yellow: #FFCE12;
+    --txt-white: #FFFFFF;
+    --orange: #FFA41C;
+    --bkg-main: #E3E6E6;
+    --btn-yellow-hover: #F8BD19;
+    --btn-orange-hover: #FA8900;
+}
+
+body{
+    font-family: "Roboto", sans-serif !important;
+    background-color: var(--bkg-main)
+}
+
+header{
+    background-color: var(--nav-blue)!important;
+}
+
+.navbar a{
+    color: var(--txt-white)!important;
+}
+
+.navbar a:hover{
+    color: var(--orange)!important;
+}
+
+.navbar-toggler{
+    background-color: var(--orange);
+}
+
+.card{
+    width: 300px;
+    height: auto;
+}
+
+.card-body{
+    background-color: #FFFFFF;
+}
+
+.card-image{
+    max-width: 274px;
+    max-height: 274px;
+    object-fit: contain;
+}
+
+.btn-buy{
+    background-color: var(--orange);
+    color: var(--nav-blue);
+}
+
+.btn-add-cart{
+    background-color: var(--btn-yellow);
+    color: var(--nav-blue);
+}
+
+.btn-buy:hover{
+    background-color: var(--btn-orange-hover);
+}
+
+.btn-add-cart:hover{
+    background-color: var(--btn-yellow-hover);
+}
