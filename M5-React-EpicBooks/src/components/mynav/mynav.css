@@ -1,0 +1,22 @@
+.nav-bkg {
+  background-color: var(--main-blu);
+}
+
+.nav-bkg a {
+  color: var(--txt-white);
+}
+
+.nav-bkg a:hover,
+.nav-bkg a:active,
+.nav-bkg a:visited {
+  color: var(--link-grey) !important;
+}
+
+.navbar-toggler {
+  background-color: var(
+    --btn-yellow
+  );
+}
+.navbar-toggler-icon {
+  background-color: var(--btn-yellow);
+}

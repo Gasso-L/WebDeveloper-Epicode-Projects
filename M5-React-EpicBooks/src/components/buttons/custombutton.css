@@ -1,0 +1,10 @@
+.custom-btn {
+    color: black;
+}
+
+.btn-add-cart,
+.btn-add-cart:hover,
+.btn-buy-now,
+.btn-buy-now:hover{ 
+    background-color: var(--btn-yellow);
+}
