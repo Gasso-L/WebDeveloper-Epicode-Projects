@@ -1,5 +1,6 @@
-import { Col, Card, Button } from "react-bootstrap";
-import { useState } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+import { Card, Button } from "react-bootstrap";
+import { useContext } from "react";
 import "./customcard.css";
 
 const CustomCard = ({
@@ -8,24 +9,24 @@ const CustomCard = ({
   img,
   price,
   category,
-  onShowModalComment,
-  setModalCommentData,
+  setSelected,
+  selected,
 }) => {
-  const [isSelected, setIsSelected] = useState(false); //selezione card
+  const { isDarkMode } = useContext(ThemeContext);
 
   const selectedCard = () => {
-    setIsSelected(!isSelected);
-  };
-
-  //funzione apertura modale e salvataggio dati da mandare al modale
-  const populateModalComment = () => {
-    setModalCommentData({ asin, title });
-    onShowModalComment();
+    setSelected((prevSelected) => (prevSelected === asin ? null : asin));
   };
 
   return (
-    <Col sm={12} md={6} lg={3} key={asin} className="custom-card">
-      <Card className={`border ${isSelected ? `border-3 border-warning` : ""}`}>
+    <>
+      <Card
+        onClick={selectedCard}
+        key={asin}
+        className={`custom-card border ${
+          selected ? `border-3 border-warning` : ""
+        } ${isDarkMode ? `dark-mode` : `light-mode`}`}
+      >
         <div className="d-flex justify-content-center pt-1">
           <Card.Img variant="top" src={img} />
         </div>
@@ -35,16 +36,11 @@ const CustomCard = ({
             {price}€ | {category}
           </Card.Text>
           <div className="d-flex flex-column align-content-center gap-2">
-            <Button variant="warning" onClick={selectedCard}>
-              Add To Cart
-            </Button>
-            <Button variant="success" onClick={populateModalComment}>
-              Reviews
-            </Button>
+            <Button variant="warning">Add To Cart</Button>
           </div>
         </Card.Body>
       </Card>
-    </Col>
+    </>
   );
 };
 

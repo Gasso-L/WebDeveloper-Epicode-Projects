@@ -1,0 +1,11 @@
+.main-content {
+  min-height: calc(100dvh - 250px);
+}
+
+.bkg-dark-mode {
+  background-color: var(--main-blu);
+}
+
+.bkg-light-mode {
+  background-color: #fff;
+}

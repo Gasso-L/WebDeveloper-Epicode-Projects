@@ -1,11 +1,14 @@
-import { apiData } from "../../../../data/apiData.js";
+import { ThemeContext } from "../../../contexts/ThemeContext.jsx";
 import { Form, Button, Spinner, Alert } from "react-bootstrap";
-import { useState } from "react";
+import { apiData } from "../../../../data/apiData.js";
+import { useState, useContext } from "react";
 
-const AddComment = ({ productID }) => {
+const AddComment = ({ productID, getReviewProduct }) => {
   //Controllo API: spinner ed errori
   const [isLoading, setIsLoading] = useState(false); //stato per il caricamento
   const [errorAPI, setErrorAPI] = useState(""); //useState per l'errore
+
+  const { isDarkMode } = useContext(ThemeContext);
 
   const sendReviewProduct = async (product) => {
     try {
@@ -23,6 +26,7 @@ const AddComment = ({ productID }) => {
       setErrorAPI(error.message);
     } finally {
       setIsLoading(false);
+      getReviewProduct();
     }
   };
 
@@ -55,7 +59,9 @@ const AddComment = ({ productID }) => {
             rows={3}
           />
         </Form.Group>
-        <Form.Label>Rating:</Form.Label>
+        <Form.Label className={`${isDarkMode ? `text-light` : ``}`}>
+          Rating:
+        </Form.Label>
         <Form.Select
           name="rating"
           required

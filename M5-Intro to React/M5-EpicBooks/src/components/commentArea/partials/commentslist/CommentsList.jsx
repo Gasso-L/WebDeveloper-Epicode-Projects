@@ -1,9 +1,14 @@
 import SingleComment from "../singlecomment/SingleComment";
 import { Table } from "react-bootstrap";
+import "./commentslist.css";
 
-const CommentsList = ({ productComments }) => {
+const CommentsList = ({
+  productComments,
+  getReviewProduct,
+  setcurrentEditComment,
+}) => {
   return (
-    <>
+    <div className="custom-table">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -22,12 +27,14 @@ const CommentsList = ({ productComments }) => {
                 author={productComment.author}
                 comment={productComment.comment}
                 rate={productComment.rate}
+                getReviewProduct={getReviewProduct}
+                setcurrentEditComment={setcurrentEditComment}
               />
             );
           })}
         </tbody>
       </Table>
-    </>
+    </div>
   );
 };
 

@@ -13,10 +13,15 @@
 }
 
 .navbar-toggler {
-  background-color: var(
-    --btn-yellow
-  );
+  background-color: var(--btn-yellow);
 }
 .navbar-toggler-icon {
   background-color: var(--btn-yellow);
+}
+
+.btn-theme,
+.btn-theme:hover,
+.btn-theme:active {
+  background-color: var(--main-blu) !important;
+  border: none !important;
 }
